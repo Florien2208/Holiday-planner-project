@@ -1,0 +1,73 @@
+  .logomodular {
+    margin-left: 60rem;
+    left: auto;
+}
+
+ .logomodular img{
+    height: 30vh;
+    margin-top: 18rem;
+    opacity: 0.2;
+
+}
+    
+   .fullmodular {
+        margin-top: -26rem;
+        margin-left: 5rem;
+    }
+    
+    .fullmodular .sitemodular img {
+        width: 349px;
+    }
+    .modalcontent{
+        margin-top: 3rem;
+        margin-left: -1.2rem;
+        padding: 1rem;
+        background-color: #393939;
+        width: 50%;
+        height: 50vh;
+        text-decoration: none;
+    }
+    .modalcontent ul li{
+        list-style: none;  
+        margin-left: 5rem;
+        margin-top: 1rem;
+        cursor: pointer;
+    }
+    .modalcontent ul li a{
+        text-decoration: none;
+        color: #ffffff;
+        cursor: pointer;
+  
+    }
+    .modalcontent ul li a:hover{
+        color: #C29D59;
+        text-decoration: line-through;
+        transition: text-decoration 0.3s
+    }
+    
+    .closemodular{
+     margin-left: 63rem;
+     margin-top: -4rem;
+}
+.closemodular-one{
+    width: 55px;
+    height: 55px;
+    font-size: 1.8rem;
+    font-weight: 100;
+    align-items: center;
+    text-align: center;
+    background-color: #2B2B2B;
+    color: #ffffff;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.selectoptions{
+  width: .7rem;
+  height: .7rem;
+  background-color: #2B2B2B; 
+  margin-left: 1rem;
+  color: #2B2B2B; 
+}
+ :root {
+    background-color: #2B2B2B;
+} 

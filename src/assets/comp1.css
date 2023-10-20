@@ -1,0 +1,70 @@
+
+
+:root {
+    --yellow-color: #C29D59;
+    --dark-color: #2B2B2B;
+    --white-light-color: #F6F6F6;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+    --primary-font-family: 'Titillium Web';
+    --secondary-font-family: 'Cormorant Garamond';
+    --transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+} */
+
+.form-input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    padding: 10px 45px;
+    border: 1px solid var(--dark-color);
+    border-radius: 5px;
+    color: var(--dark-color);
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.banner-form {
+    background: var(--white-color);
+    box-shadow: var(--box-shadow);
+    padding: 25px 30px;
+    position: relative;
+    margin-top: -50px;
+    border-left: 3px solid var(--yellow-color);
+    border-right: 3px solid var(--yellow-color);
+    margin-left: 5rem;
+}
+
+.banner-form form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.banner-form form .input-col {
+    max-width: 27.545%;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    flex: 0 0 27.545%;
+}
+
+.banner-form form .input-col.button-col {
+    max-width: 17.365%;
+    flex: 0 0 17.365%;
+}
+
+
+
+
