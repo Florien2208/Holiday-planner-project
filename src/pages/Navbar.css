@@ -68,6 +68,7 @@
   margin-left: 1rem;
   color: #2B2B2B; 
 }
- :root {
+  .modular {
     background-color: #2B2B2B;
+    height: 100vh;
 } 

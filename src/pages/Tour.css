@@ -1,0 +1,1031 @@
+.background_imagetour {
+  background-image: url('https://html.geekcodelab.com/holiday-planners/assets/images/tour-banner.jpg'); /* Replace with the actual image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 35rem; /* Set a fixed height for the background image */
+  z-index: 8888;
+}
+.contetour
+{
+    font-size:4rem;
+    margin-left: 30rem;
+}
+.contenttour {
+  padding-top:12rem; /* Adjust the padding value to control the placement */
+}
+
+
+.rowtour {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.rowlefttour {
+    flex: 0 0 66.66666667%;
+    max-width: 66.66666667%;
+    position: relative;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    height: fit-content;
+}
+
+.rowrighttour {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    position: relative;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: fit-content;
+
+}
+/* 
+.contact-list-item {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+}
+
+.contact-list-item li {
+    display: inline-block;
+    border-left: 1px solid rgb(255 255 255 / 0.5);
+}
+
+.contact-list-item li:first-child {
+    border-left: none;
+}
+
+.contact-list-item li .icon {
+    margin-right: 9px;
+    font-size: 25px;
+    display: inline-block;
+}
+
+.contact-list-item li .text {
+    color: var(--white-color);
+    transition: var(--transition);
+}
+
+.contact-list-item .li-item {
+    padding: 11px 15px;
+    display: inline-flex;
+    align-items: center;
+    height: 50px;
+    font-size: 16px;
+    align-items: center;
+
+}
+
+.contact-list-item .li-item:hover {
+    color: var(--dark-color);
+    background: var(--white-color);
+}
+
+.contact-list-item .li-item .text {
+    color: var(--dark-color);
+
+}
+
+.li-item {
+    display: flex;
+    text-decoration: none;
+    color: aliceblue;
+    align-items: center;
+} */
+
+/* .faicon {
+    font-size: xx-large;
+    color: rgb(194, 157, 89);
+    align-items: center;
+    align-content: center;
+} */
+
+.containertour {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* 
+.for-des {
+    display: block !important;
+} */
+
+.secbtntour {
+    width: 170px;
+    height: 50px;
+    background: var(--yellow-color);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 0;
+    color: var(--white-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.secbtntour span {
+    position: relative;
+    z-index: 1;
+}
+
+.secbtntour:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark-color);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+    -webkit-transition: -webkit-transform 0.95s cubic-bezier(0.23, 1, 0.23, 1);
+    transition: transform 0.95s cubic-bezier(0.23, 1, 0.23, 1), -webkit-transform 0.95s cubic-bezier(0.23, 1, 0.23, 1);
+    z-index: -1;
+}
+/* 
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+} */
+
+select:focus {
+    outline: none;
+}
+
+.formcontrolspantour {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.forminputtour {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    padding: 10px 45px;
+    border: 1px solid var(--dark-color);
+    border-radius: 5px;
+    color: var(--dark-color);
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.forminputtour::placeholder {
+    color: var(--dark-color);
+}
+
+textarea.forminputtour {
+    resize: none;
+    height: 120px;
+    display: block;
+}
+
+.formcontrolspantour .arrowtour {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    font-size: 20px;
+    color: var(--dark-color);
+    pointer-events: none;
+}
+/* 
+.navigation-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: var(--yellow-color);
+    border: 2px solid var(--yellow-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 15px;
+    padding: 15px 13px;
+    position: relative;
+    transition: var(--transition);
+}
+
+.navigation-btn span {
+    height: 2px;
+    background: var(--white-color);
+    margin-bottom: 4px;
+    display: block;
+    transition: var(--transition);
+}
+
+.navigation-btn span.first {
+    width: 25px;
+}
+
+.navigation-btn span.second {
+    width: 20px;
+    margin-left: auto;
+}
+
+.navigation-btn span.third {
+    width: 15px;
+    margin-left: auto;
+    margin-bottom: 0;
+}
+
+.site-header.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.site-header.sticky-header .top-header {
+    height: 0;
+    transition: var(--transition);
+}
+
+.site-header.sticky-header .bottom-header-inner {
+    margin-top: 0;
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.site-header.sticky-header .bottom-header:before {
+    width: 100%;
+    transition: var(--transition);
+} */
+
+/* .main-navigation{
+    position: relative;
+} */
+/* 
+.full-menu {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100vw;
+    height: 100vh;
+    background: var(--dark-color);
+    overflow: hidden;
+    overflow-y: auto;
+    transition: var(--transition);
+    opacity: 0;
+}
+
+.full-menu .logo-icon {
+    right: 50px;
+    left: auto;
+    bottom: 50px;
+}
+
+.full-menu .full-menu-logo-row {
+    padding-top: 60px;
+    padding-bottom: 13vh;
+}
+
+.full-menu .full-menu-logo-row .site-branding img {
+    width: 349px;
+}
+
+.full-menu .menu-container {
+    position: relative;
+    padding: 5vh 0;
+}
+
+.full-menu .menu-container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500%;
+    height: 100%;
+    background: #393939;
+    z-index: 1;
+}
+
+.full-menu .menu-container>ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.full-menu .menu-container ul li {
+    margin-bottom: 5px;
+}
+
+.full-menu .menu-container ul li.active .a {
+    color: var(--yellow-color);
+}
+
+.full-menu .menu-container ul li .a {
+    color: var(--white-color);
+    font-family: var(--secondary-font-family);
+    font-size: max(3.7vh, 15px);
+    line-height: max(4.7vh, 25px);
+    font-weight: bold;
+    position: relative;
+    display: inline-flex;
+    transition: var(--transition);
+}
+
+.full-menu .menu-container ul li .a:before {
+    content: '';
+    position: absolute;
+    top: 52%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--yellow-color);
+    z-index: -1;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: right;
+    transform-origin: right;
+    -webkit-transition: -webkit-transform 0.95s cubic-bezier(0.23, 1, 0.23, 1);
+    transition: transform 0.95s cubic-bezier(0.23, 1, 0.23, 1), -webkit-transform 0.95s cubic-bezier(0.23, 1, 0.23, 1);
+}
+
+.full-menu .menu-container ul li.dropdown-items>.a {
+    margin-right: 2rem;
+}
+
+.main-navigation.toggle-menu .navigation-btn span.first {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    left: 50%;
+    width: 25px;
+}
+
+.main-navigation.toggle-menu .navigation-btn span.second {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.main-navigation.toggle-menu .navigation-btn span.third {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    left: 50%;
+    width: 25px;
+}
+
+.full-menu .menu-container ul li .a:hover,
+.full-menu .menu-container ul li.active .a {
+    color: var(--yellow-color);
+}
+
+.full-menu .menu-container ul li .a:hover:before,
+.full-menu .menu-container ul li.active .a:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+}
+
+.full-menu .menu-container ul li.dropdown-items>.a {
+    margin-right: max(3vh, 15px);
+}
+
+.full-menu .menu-container ul li.dropdown-items>.a:after {
+    content: "\f078";
+    position: absolute;
+    color: #fff;
+    font-size: max(2.3vh, 15px);
+    line-height: max(2.3vh, 15px);
+    right: -3vh;
+    top: 55%;
+    transition: var(--transition);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transform: translate(0, -50%);
+}
+
+.full-menu .menu-container ul li.dropdown-items.dropdown-open>.a:after {
+    transform: translate(0, -50%) rotate(180deg);
+}
+
+.full-menu .menu-container .sub-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 5px 0 0 30px;
+}
+
+.full-menu .menu-container .sub-menu li .a {
+    font-size: max(3vh, 15px);
+    line-height: max(4vh, 25px);
+}
+
+.full-menu .menu-container .dropdown-items.dropdown-open .sub-menu {
+    display: flex;
+}
+
+.full-menu-social {
+    position: absolute;
+    right: 220px;
+}
+
+.full-menu-social ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.full-menu-social ul li .a {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: inline-flex;
+    background: var(--yellow-color);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+}
+
+.full-menu-social ul li {
+    margin-bottom: 15px;
+}
+
+.full-menu-social ul li:last-child {
+    margin-bottom: 0;
+}
+
+.full-menu-social ul li .a:hover {
+    color: var(--yellow-color);
+    background: var(--white-color);
+} */
+
+/*==========About CSS Start==========*/
+/* 
+.about-image-wp {
+    position: relative;
+    padding-right: 100px;
+    padding-bottom: 40px;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    
+}
+.main-about.common-sec {
+    padding-top: 80px;
+    opacity: 0.95;
+    position: absolute;
+}
+.about-image-box.big {
+    width: 100%;
+    height: 440px;
+    padding: 7px;
+    border: 3px solid var(--yellow-color);
+    background: var(--white-color);
+    box-shadow: var(--box-shadow);
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+}
+
+.about-image-box.small {
+    width: 270px;
+    height: 200px;
+    padding: 7px;
+    border: 3px solid var(--yellow-color);
+    background: var(--white-color);
+    box-shadow: var(--box-shadow);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.about-content .secbtntour {
+    margin-top: 20px;
+}
+
+.about-content {
+    padding-right: 26px;
+    padding-top: 30px;
+} */
+.colrow6tour{
+   flex:0 0 50%;
+   max-width: 50%;
+   /* row-gap: 20rem; */
+
+
+}
+.colrow12tour{
+   flex:0 0 100%;
+   max-width: 100%;
+   /* row-gap: 20rem; */
+
+
+}
+
+/*==========Destination CSS End==========*/
+
+/*==========Tour Offer CSS Start==========*/
+/* .swiper-slide{
+    width: 800px;
+} */
+.rowrighttour .slick-slide .slick-cloned{
+    width: 100%;
+}
+/* 
+.tour-offer-box .a {
+    display: block;
+}
+.main-tour p{
+    color: var(--dark-color);
+}
+
+.tour-offer-box .tour-offer-box-image-wp {
+    padding-right: 30px;
+}
+
+.tour-offer-box .tour-offer-box-image {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    box-shadow: var(--box-shadow);
+} */
+
+.discountlabeltour {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    transform: rotate(270deg) translateX(-100%);
+    transform-origin: 0 0;
+    background-color: var(--yellow-color);
+    color: var(--white-color);
+    padding: 5px 10px;
+    font-size: 15px;
+    line-height: 25px;
+    box-sizing: border-box;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+}
+
+.tour-offer-box:hover .discountlabeltour,
+.tourboxtour:hover .discountlabeltour {
+    padding: 5px 20px;
+}
+/* 
+.tour-offer-box-content {
+    background: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    border-left: 3px solid var(--yellow-color);
+    box-shadow: var(--box-shadow);
+    margin-left: 30px;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
+}
+
+.tour-offer-box-content .h4titletour {
+    margin-bottom: 0;
+    margin: 15px 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+} */
+
+/*--- Tour services Start ---*/
+/* 
+.tour-services-row {
+    width: 100%;
+    padding: 40px 50px;
+    background: var(--yellow-color);
+    position: relative;
+    z-index: 2;
+}
+.slick-list .slick-cloned{
+    width: 380px;
+}
+
+.tour-services-row:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: -1;
+}
+
+.tour-service-box {
+    display: flex;
+    align-items: flex-start;
+}
+
+.tour-service-box .tour-service-icon {
+    width: 50px;
+    flex: 0 0 50px;
+    margin-right: 15px;
+} */
+
+.tour-service-content .h4titletour {
+    font-family: var(--primary-font-family);
+    color: var(--white-color);
+}
+/* 
+.tour-service-content p {
+    margin-bottom: 0;
+    color: var(--white-color);
+}
+
+.tour-services {
+    margin-top: -50px;
+    position: relative;
+    z-index: 2;
+}
+ */
+
+/*--- Tour services End ---*/
+
+.tourboxtour {
+    background: var(--white-color);
+    box-shadow: var(--box-shadow);
+}
+
+.tourboxtour .tourboximagetour {
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+
+.tourboxcontenttour {
+    border-left: 3px solid var(--yellow-color);
+    padding: 30px 20px 15px 20px;
+    position: relative;
+}
+
+.tourboxlabeltour .h4titletour {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 0;
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+
+.tourboxlabeltour {
+    display: inline-block;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    right: 20px;
+}
+
+.tourboxinnerlabeltour {
+    background: var(--yellow-color);
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.tourboxtitletour .h4titletour {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.tourboxdescriptiontour {
+    margin-bottom: 15px;
+}
+
+.tourboxdescriptiontour p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    opacity: 0.6;
+}
+
+.tourinfoboxtour {
+    padding: 15px 0;
+    border-top: 1px solid rgb(43 43 43 / 0.1);
+    border-bottom: 1px solid rgb(43 43 43 / 0.1);
+}
+
+.tourinfotour {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* .tour-info-icon .i {
+    font-size: 25px;
+    color: var(--yellow-color);
+} */
+/* 
+.tour-info-icon {
+    margin-right: 10px;
+} */
+
+.tourinfocontenttour {
+    flex: 1;
+}
+
+.tourinfocontenttour .h6titletour {
+    margin-bottom: 0;
+}
+
+.tourinfocontenttour p {
+    font-size: 12px;
+    line-height: 14px;
+    opacity: 0.6;
+}
+
+.tourboxbottomtour {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.booknowbuttontour .secbtntour {
+    width: 120px;
+}
+/* 
+.tour-slider .slick-list {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.tour-slider.slick-slider {
+    margin-bottom: 0;
+}
+
+.tour-slider .slick-arrow {
+    top: -115px;
+    right: 15px;
+    left: auto;
+    transform: unset;
+}
+
+.tour-slider .next-arrow.slick-arrow {
+    top: -60px;
+}
+
+.tour-sec {
+    padding-bottom: 227px;
+}
+
+.tour-slider .slick-dots {
+    bottom: -45px;
+}
+ */
+
+
+.get-a-questions:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--yellow-color);
+    opacity: 0.9;
+    z-index: 1;
+}
+
+.get-a-questions * {
+    position: relative;
+    z-index: 2;
+}
+
+.get-a-questions .linetitletour {
+    border-color: var(--dark-color);
+}
+
+.get-a-questions .linetitletour .h4titletour {
+    color: var(--white-color);
+}
+
+.get-a-questions p {
+    color: var(--white-color);
+    margin-bottom: 20px;
+}
+
+.gaqlistitemtour li i {
+    color: var(--dark-color);
+    font-size: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.gaqlistitemtour li a {
+    color: var(--white-color);
+}
+
+.gaqlistitemtour li {
+    margin-bottom: 20px;
+}
+
+.gaqlistitemtour li:last-child {
+    margin-bottom: 0;
+}
+
+/*============(Page)Destination Detail CSS Start============*/
+/* 
+.left-side-box {
+    padding: 30px;
+    background: var(--white-color);
+    box-shadow: var(--box-shadow);
+} */
+
+.leftsidetour {
+    padding-top: 30px;
+}
+/* 
+.destination-gallery-box {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+}
+
+.destination-gallery-box .destination-gallery-image {
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.destination-gallery-box .destination-gallery-image:hover {
+    transform: scale(1.2) rotate(2deg);
+}
+
+.destination-gallery-box.big {
+    height: 230px;
+}
+
+blockquote {
+    margin: 15px 0;
+    background: var(--white-light-color);
+    padding: 10px 12px 10px 30px;
+    border-left: 3px solid var(--yellow-color);
+    font-weight: 600;
+    font-style: italic;
+}
+
+blockquote p {
+    font-size: 18px;
+    line-height: 28px;
+} */
+
+.widgettour {
+    position: relative;
+    padding: 40px;
+    background-color: var(--white-color);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 40px;
+}
+
+.widgettour:last-child {
+    margin-bottom: 0;
+}
+
+.widgettour .linetitletour {
+    margin-bottom: 20px;
+}
+
+.search-form .secbtntour {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    font-size: 20px;
+}
+
+.search-form .forminputtour {
+    padding: 15px 70px 15px 20px;
+}
+
+.rightsidetour {
+    margin-top: -50px;
+    position: relative;
+    z-index: 2;
+}
+
+.widgettour .linetitletour .h4titletour {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--dark-color);
+}
+/* 
+.about-author {
+    text-align: center;
+}
+
+.about-author .about-author-image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+}
+
+.about-author .h5-title {
+    text-transform: uppercase;
+    font-family: var(--primary-font-family);
+}
+
+.author-social {
+    margin-top: 20px;
+}
+
+.author-social li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.author-social li a {
+    font-size: 17px;
+}
+
+.author-social li a:hover {
+    color: var(--dark-color);
+}
+
+.categories-list li {
+    margin-bottom: 10px;
+}
+
+.categories-list li:last-child {
+    margin-bottom: 0;
+}
+
+.categories-list li a {
+    width: 100%;
+    background: var(--white-color);
+    box-shadow: var(--box-shadow);
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+/*============(Page)Destination Detail CSS End============*/
+
+
+/*============(Page)Tour Detail CSS End============*/
+/*==========Common CSS Start==========*/
+
+:root {
+  --yellow-color: #C29D59;
+  --dark-color: #2B2B2B;
+  --white-light-color: #F6F6F6;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+  --primary-font-family:
+    'Titillium Web';
+  --secondary-font-family:
+    'Cormorant Garamond';
+  --transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* .checkboxlisttour{
+    display: flex;
+    flex-direction: row;
+} */
+.checkboxitemtour{
+    display: flex;
+    flex-direction: row;
+              
+}

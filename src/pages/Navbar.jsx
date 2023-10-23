@@ -72,7 +72,7 @@ function Navbar() {
                             <Link to="/Tour" onClick={closeModal}>
                               Tour
                             </Link>
-                            <select className="selectoptions">
+                            {/* <select className="selectoptions">
                               <option value="" className="options"></option>
                               <option value="Tour" className="options">
                                 Tour
@@ -80,7 +80,7 @@ function Navbar() {
                               <option value="Tour details" className="options">
                                 Tour details
                               </option>
-                            </select>
+                            </select> */}
                           </li>
 
                           <li>

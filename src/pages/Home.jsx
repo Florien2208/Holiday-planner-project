@@ -13,7 +13,7 @@ import a2 from "../images/down1.jpg";
 import a3 from "../images/down2.jpg";
 import mountain from "../images/mountain.jpg";
 import woo from "../images/image.jpg";
-import small from "../images/image.jpg";
+import small from "../images/about-home.jpg";
 // import Com1 from "../assets/comp1";
 function Home() {
     // const [isOpen, setIsOpen] = useState(false);
@@ -201,7 +201,10 @@ const containerStyle1 = {
 
         <br />
         <br />
-        <div className="mainmodular" style={{ zIndex: 999,backgroundColor:"white" }}>
+        <div
+          className="mainmodular"
+          style={{ zIndex: 999, backgroundColor: "white" }}
+        >
           <div className="">
             <div className="">
               <div className="rowbox">
@@ -478,7 +481,7 @@ const containerStyle1 = {
         </section>
         <br />
         <div className="hello">
-          <section className="main-testimonial">
+          {/* <section className="main-testimonial">
             <div className="container">
               <div className="row align-items-end">
                 <div className="col-lg-5">
@@ -496,13 +499,13 @@ const containerStyle1 = {
                       </h2>
                     </div>
                     <div
-                      style={{ backgroundImage: `url(${testmony})` }}
+                      // style={{ backgroundImage: `url(${testmony})` }}
                       className="testimonial-quote"
                     >
-                      {/* <img
-                        src="assets/images/testimonial-quote.svg"
+                      <img
+                        src="https://html.geekcodelab.com/holiday-planners/assets/images/testimonial-quote.svg"
                         alt="testimonial-quote"
-                      /> */}
+                      />
                     </div>
                   </div>
                 </div>
@@ -563,7 +566,7 @@ const containerStyle1 = {
                         </div>
                       </div>
 
-                      {/* <div className="testimonial-slide">
+                      <div className="testimonial-slide">
                         <div className="testimonial-stars">
                           <i className="fas fa-star"></i>
                           <i className="fas fa-star"></i>
@@ -584,13 +587,13 @@ const containerStyle1 = {
                           <h3 className="h3-title">Mathew A. Stephenson</h3>
                           <p className="rated">Rated by travelers on twitter</p>
                         </div>
-                      </div> */}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
         </div>
       </div>
     </>

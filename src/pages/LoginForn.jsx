@@ -1,20 +1,43 @@
 import React, { useState } from "react";
 import "../pages/LoginForm.css";
-import {FiFacebook} from "react-icons/Fi";
-import {FcGoogle} from "react-icons/Fc";
-import mg from "../pages/image9.jpg";
 import logoIconblack from "../images/logo.png";
 import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 
 const LoginForn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
-
-  const handleSubmit = (event) => {
+  const navigate = useNavigate();
+  const handleSubmit = async (event) => {
     event.preventDefault();
     // TODO: Implement login logic here
+    const userData = {
+      email,
+      password,
+    };
+    try {
+      const response = await fetch(
+        "https://holidayplanner.onrender.com/auth/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userData),
+        }
+      );
+      if (response.ok) {
+        // Instead of using useHistory, use the Link component for navigation
+        // return <Link to="/dashboard" />;
+        navigate("/dashboard");
+      } else {
+        alert("Invalid email or password");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred while logging in.");
+    }
   };
 
   const handleRememberMeChange = () => {
@@ -34,10 +57,12 @@ const LoginForn = () => {
           <div className="Test">
             <h1 style={{ color: "black" }}>Login Form</h1>
             <div className="form-links">
-              <h3 style={{ color: "black" }}>Does not have account before?</h3>
-              <a href="/SignupForm" style={{ color: "black" }}>
+              <h3 style={{ color: "black" }}>
+                Does not have an account before?
+              </h3>
+              <Link to="/SignupForm" style={{ color: "black" }}>
                 <h2 style={{ color: "blue" }}> Signup</h2>
-              </a>
+              </Link>
             </div>
             <br />
             Email
@@ -48,9 +73,9 @@ const LoginForn = () => {
               onChange={(event) => setEmail(event.target.value)}
             />
             <div className="form-links">
-              <a href="/forgot-password" style={{ color: "black" }}>
+              <Link to="/forgot-password" style={{ color: "black" }}>
                 Forgot Password
-              </a>
+              </Link>
             </div>
             <br />
             Password
@@ -68,20 +93,13 @@ const LoginForn = () => {
                   checked={rememberMe}
                   onChange={handleRememberMeChange}
                 />
-              </label>{"  "}
+              </label>
+              {"  "}
               Remember Me
             </div>
             <button type="submit">Login</button>
             <br />
             <br />
-            {/* <div className="ico1">
-              <div className="ic">
-                <FiFacebook />
-              </div>
-              <div className="ico">
-                <FcGoogle />
-              </div>
-            </div> */}
           </div>
         </form>
       </div>

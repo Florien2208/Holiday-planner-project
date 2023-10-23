@@ -6,12 +6,13 @@
 }
 
 .sidebar {
-  background-color: black;
-  color: white;
+  background-color: #eaecef;
   width: 250px; 
   padding: 20px;
   height: 100vh;
    position: fixed;
+  border-top-right-radius: 4rem;
+  border-bottom-right-radius: 4rem;
 }
 
 .sidebar h2 {
@@ -29,7 +30,7 @@
 
 .sidebar a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: 18px;
   
 }
@@ -66,4 +67,8 @@ ul li svg {
 ul li a {
   text-decoration: none;
   color: #000; /* Set your desired text color */
+}
+.logoutdashboard{
+  display: flex;
+  align-items: end;
 }

@@ -1,0 +1,16 @@
+.backgroundabout1 {
+  background-image: url('https://html.geekcodelab.com/holiday-planners/assets/images/about-banner.jpg'); /* Replace with the actual image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 35rem; /* Set a fixed height for the background image */
+  z-index: 8888;
+}
+.contetour2
+{
+    font-size:4rem;
+    margin-left: 30rem;
+}
+.contenttour1 {
+  padding-top:20rem; /* Adjust the padding value to control the placement */
+}
