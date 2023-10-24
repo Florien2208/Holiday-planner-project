@@ -67,3 +67,8 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+* {
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important; */
+  font-family: 'Montserrat', sans-serif;
+}

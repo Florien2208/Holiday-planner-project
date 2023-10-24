@@ -50,7 +50,7 @@ const Dashboard = () => {
 
             <li>
               <GiCommercialAirplane />
-              <Link to="#">Tour</Link>
+              <Link to="/TourDashboard/">Tour</Link>
             </li>
             <br />
 
@@ -62,7 +62,7 @@ const Dashboard = () => {
             <br />
             <li>
               <TbBrandBooking />
-              <Link to="#">Users</Link>
+              <Link to="/UserDashboard">Users</Link>
             </li>
           </ul>
           <br/><br/>

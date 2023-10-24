@@ -22,8 +22,8 @@ const SignupForm = () => {
 
     try {
       const response = await axios.post(
-        "https://holidayplanner.onrender.com/auth/signup",
-        { 
+        "https://holiday-api-zj3a.onrender.com/api/v1/auth/signup",
+        {
           fullNames,
           email,
           password,
@@ -31,7 +31,7 @@ const SignupForm = () => {
       );
 
       // Handle the response here, e.g., show a success message or redirect to login page
-      console.log("User registered successfully", response);
+      console.log("User registered successfully", response.data);
       alert("registered successfully");
       // Clear the 
       setfullNames("")
@@ -59,18 +59,18 @@ const SignupForm = () => {
           <div className="form-left">
             <h1 style={{ color: "black" }}>Signup Form</h1>
             {/* Add Login link at the top */}
-            <div className="form-links">
+            {/* <div className="form-links">
               <h3 style={{ color: "black" }}>Back to</h3>
               <Link to="/LoginForn" style={{ color: "black" }}>
                 <h2 style={{ color: "blue" }}> Login</h2>
               </Link>
-            </div>
+            </div> */}
             <br />
             <br />
-            Full Name
+            Full Names
             <input
               type="text"
-              placeholder="fullname"
+              placeholder="full name"
               value={fullNames}
               onChange={(event) => setfullNames(event.target.value)}
             />
@@ -104,6 +104,14 @@ const SignupForm = () => {
             <br />
             <br />
             <button type="submit">Signup</button>
+            <br/>
+            <br/>
+            <div className="form-links">
+              <h3 style={{ color: "black" }}>Back to</h3>
+              <Link to="/LoginForn" style={{ color: "black" }}>
+                <h2 style={{ color: "blue" }}> Login</h2>
+              </Link>
+            </div>
           </div>
         </form>
       </div>

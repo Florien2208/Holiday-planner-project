@@ -18,7 +18,7 @@ const LoginForn = () => {
     };
     try {
       const response = await fetch(
-        "https://holidayplanner.onrender.com/auth/login",
+        "https://holiday-api-zj3a.onrender.com/api/v1/auth/login",
         {
           method: "POST",
           headers: {
@@ -30,9 +30,10 @@ const LoginForn = () => {
       if (response.ok) {
         // Instead of using useHistory, use the Link component for navigation
         // return <Link to="/dashboard" />;
+        alert("login successfully");
         navigate("/dashboard");
       } else {
-        alert("Invalid email or password");
+        alert("Invalid Email or Password");
       }
     } catch (error) {
       console.error("Error:", error);
@@ -56,14 +57,7 @@ const LoginForn = () => {
           <br />
           <div className="Test">
             <h1 style={{ color: "black" }}>Login Form</h1>
-            <div className="form-links">
-              <h3 style={{ color: "black" }}>
-                Does not have an account before?
-              </h3>
-              <Link to="/SignupForm" style={{ color: "black" }}>
-                <h2 style={{ color: "blue" }}> Signup</h2>
-              </Link>
-            </div>
+          
             <br />
             Email
             <input
@@ -72,8 +66,9 @@ const LoginForn = () => {
               value={email}
               onChange={(event) => setEmail(event.target.value)}
             />
+            <br />
             <div className="form-links">
-              <Link to="/forgot-password" style={{ color: "black" }}>
+              <Link to="" style={{ color: "blue", fontWeight: "bold" }}>
                 Forgot Password
               </Link>
             </div>
@@ -100,6 +95,14 @@ const LoginForn = () => {
             <button type="submit">Login</button>
             <br />
             <br />
+            <div className="form-links">
+              <h3 style={{ color: "black", fontSize: "20px" }}>
+                Does not have an account before?
+              </h3>
+              <Link to="/SignupForm" style={{ color: "black" }}>
+                <h2 style={{ color: "blue" }}> Signup</h2>
+              </Link>
+            </div>
           </div>
         </form>
       </div>

@@ -17,6 +17,8 @@ import ContactForm from "./pages/ContactForm";
 import { useState } from 'react';
 import Dashboardheader from "./component/Dashboard";
 import SideBarDashboard from "./component/SideBarDashboard";
+import UserDashboard from "./component/UserDashboard";
+import TourDashboard from "./pages/TourDashboard";
  const Applayout= ()=>{
  return(
  <>
@@ -66,11 +68,16 @@ function App() {
           <Route path="/LoginForn" element={<Login />} />
           <Route path="/SignupForm" element={<Signup />} />
           <Route path="/Navbar" element={<Navbar />} />
+          {/* <Route path="/TourDashboard" element={<TourDashboard />} /> */}
+          {/* <Route path="/UserDashboard" element={<UserDashboard />} /> */}
 
-          <Route path="/SideBarDashboard" element={<SideBarDashboard />} />
+          {/* <Route path="/SideBarDashboard" element={<SideBarDashboard />} /> */}
 
-          <Route path="/Dashboard" element={<Applayout1 />}>
-            {/* <Route path="/Dashboard" element={<Dashboard />} /> */}
+          <Route path="/" element={<Applayout1 />}>
+            <Route path="/Dashboard" element={<Dashboard />} />
+            <Route path="/UserDashboard" element={<UserDashboard />} />
+            <Route path="/TourDashboard" element={<TourDashboard />} />
+            {/* <UserDashboard/> */}
           </Route>
           {/* <Route path="/Dashboard" element={<Dashboard />} /> */}
         </Routes>

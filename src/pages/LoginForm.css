@@ -6,10 +6,12 @@ form {
   display: flex;
   justify-content: space-between;
   border: 1px solid black;
-  text-align: center;
+  color: rgb(62, 62, 62) !important;
+  background-color: white !important;
+  /* text-align: center; */
   border-radius: 2rem;
   flex-direction: column;
-  /* background-color: #313131; */
+  /* background-color: #a50a0a; */
   color: #c7c8c9;
   margin-top: 50px;
 }
@@ -17,15 +19,16 @@ form {
 input {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid black;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: 1px solid rgb(118, 118, 118);
 }
 
 button {
-  width: 50%;
+  width: 100%;
   padding: 10px;
   margin-top: 10px;
-  background-color: blue;
+  background-color: rgb(226, 194, 76) !important;
   color: white;
   cursor: pointer;
 }
@@ -33,13 +36,13 @@ button {
 .form-links {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
+  /* align-items: center; */
+
+  color:  rgb(226, 194, 76) !important;
 }
 
 .form-links a {
   text-decoration: none;
-  color: blue;
 }
 .remember-me{
   display: flex;

@@ -108,13 +108,13 @@ function Tour() {
   //   backgroundSize: "cover",
   //   backgroundPosition: "center center",
   // };
-  const gaqBgStyle = {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(14, 01, 29, 0.5)), url(${gaqBg})`, // Linear gradient overlay + image
-    backgroundSize: "cover",
-    backgroundPosition: "center center",
-    backgroundColor: "#c29d59",
-  };
-  // const tourData = [
+  // const gaqBgStyle = {
+  //   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(14, 01, 29, 0.5)), url(${gaqBg})`, // Linear gradient overlay + image
+  //   backgroundSize: "cover",
+  //   backgroundPosition: "center center",
+  //   backgroundColor: "#c29d59",
+  // };
+  // // const tourData = [
   //     {
   //       title: "Italy",
   //       imageSrc: a1,
@@ -555,7 +555,7 @@ function Tour() {
                         <div className="i">
                           <FaEnvelope />
                         </div>
-                        iradukundayves11@gmail.com
+                        florien@gmail.com
                       </div>
                     </li>
                     <li>
@@ -563,7 +563,7 @@ function Tour() {
                         <div className="i">
                           <FaPhone />
                         </div>
-                        (+250) 782045468
+                        (+250) 786789098
                       </div>
                     </li>
                   </ul>
