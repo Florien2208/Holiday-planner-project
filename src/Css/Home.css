@@ -1687,3 +1687,21 @@ textarea.forminputmodular {
     
 }
 /*end of main modular*/
+/* For small screens (e.g., mobile phones) */
+@media (max-width: 767px) {
+  /* Adjust the styles for small screens here */
+  .row {
+    gap: 15px; /* Adjust the gap between elements for small screens */
+  }
+  /* Add more responsive styles here */
+}
+
+/* For medium-sized screens (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Adjust the styles for medium-sized screens here */
+}
+
+/* For large screens (e.g., desktops) */
+@media (min-width: 1024px) {
+  /* Adjust the styles for large screens here */
+}

@@ -73,7 +73,7 @@ const UserDashboard = () => {
             <tr>
               <th>Names</th>
               <th>Email</th>
-              <th>Passwords</th>
+              {/* <th>Passwords</th> */}
               <th>Edit</th>
               <th>Delete</th>
             </tr>
@@ -83,7 +83,7 @@ const UserDashboard = () => {
               <tr key={index}>
                 <td>{user.fullNames}</td>
                 <td>{user.email}</td>
-                <td>{user.password}</td>
+                {/* <td>{user.password}</td> */}
                 <td>
                   <button onClick={() => handleEdit(user)}>Edit</button>
                 </td>

@@ -84,18 +84,7 @@ const containerStyle1 = {
         price: "$750",
         discount: "38% off",
       },
-      // {
-      //   title: "Switzerland",
-      //   imageSrc: a3,
-      //   description:
-      //     "Holiday Planners is a World Leading Online Tour Booking Platform",
-      //   description1:
-      //     "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.",
-      //   duration: "7 days 8 hours",
-      //   groupSize: "50+ People",
-      //   price: "$750",
-      //   discount: "38% off",
-      // },
+      
     ];
   return (
     <>
@@ -130,74 +119,10 @@ const containerStyle1 = {
               </div>
             </div>
 
-            {/* <div
-              className="banner-slide-box overlay back-image"
-              //   style="background-image: url(assets/images/banner-slide-2.jpg);"
-            >
-              <div className="sec-wp">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-lg-8 m-auto">
-                      <div
-                        className="banner-content wow fadeup-animation"
-                        data-wow-duration="1s"
-                        data-wow-delay="0.1s"
-                      >
-                        <h1 className="h1-title">
-                          Life is Short and <span>The World is Wide.</span>
-                        </h1>
-                        <p>
-                          A journey of a 1000 miles starts with a single step.
-                          Import the full demo content with 1 click and create a
-                          head-turning website for your travel agency.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="banner-slide-box overlay back-image"
-              //   style="background-image: url(assets/images/banner-slide-3.jpg);"
-            >
-              <div className="sec-wp">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-lg-8 m-auto">
-                      <div
-                        className="banner-content wow fadeup-animation"
-                        data-wow-duration="1s"
-                        data-wow-delay="0.1s"
-                      >
-                        <h1 className="h1-title">
-                          Get Ready to Travel <span>The World.</span>
-                        </h1>
-                        <p>
-                          A journey of a 1000 miles starts with a single step.
-                          Import the full demo content with 1 click and create a
-                          head-turning website for your travel agency.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> */}
+           
           </div>
         </section>
-        {/* <nav className="navbar">
-          <img src={img} alt="Image Description" className="img" />
-          <button>RESERVE</button>
-          <div className={`search-bar ${isOpen ? "open" : ""}`}>
-            <button className="search-button" onClick={toggleSearch}>
-              <i className="fa fa-search"></i>
-              {img1}
-            </button> */}
-        {/* <input type="text" placeholder="Search..." className="search-input" /> */}
-        {/* </div>
-        </nav> */}
+        
 
         <br />
         <br />
@@ -308,18 +233,7 @@ const containerStyle1 = {
               <div className="row">
                 <div className="col-lg-6">
                   <div className="about-image-wp">
-                    {/* <div
-                      className="about-image-box big wow right-animation"
-                      data-wow-duration="1s"
-                      data-wow-delay="0.1s"
-                      //   style={containerStyle1}
-                    >
-                      <div
-                        className="about-image back-image"
-
-                        // style="background-image: url(assets/images/about-big-image.jpg);"
-                      ></div>
-                    </div> */}
+                    
                     <div
                       style={containerStyle1}
                       className="about-image-box small wow fadeup-animation"

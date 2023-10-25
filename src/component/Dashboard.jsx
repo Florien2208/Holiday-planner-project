@@ -6,11 +6,7 @@ import "./Dashboard.css"; // Import your CSS file
 import pro from "../images/djflo.jpg";
 import {
   BsGrid,
-//   BsChevronDown,
-//   BsWechat,
-//   BsArrowRightShort,
-//   BsDash,
-//   BsFillChatDotsFill,
+
 } from "react-icons/bs";
 import { TbBrandBooking } from "react-icons/Tb";
 // import { FaUmbrellaBeach } from "react-icons/Fa";
@@ -18,8 +14,7 @@ import { HiOutlineLogout } from "react-icons/hi";
 import { CiLocationOn } from "react-icons/ci";
 import { GiCommercialAirplane } from "react-icons/gi";
 import logoIconblack from "../images/logo.png";
-// import { RiCalendarTodoFill } from "react-icons/ri";
-// import { BiTimer, BiCreditCard } from "react-icons/bi";
+
 const Dashboard = () => {
   return (
     <div className="dashboard">

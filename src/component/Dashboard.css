@@ -72,3 +72,16 @@ ul li a {
   display: flex;
   align-items: end;
 }
+/* Add responsive styles for screens smaller than 768px */
+@media (max-width: 767px) {
+  .sidebar {
+    width: 100%; /* Take full width on small screens */
+    border-radius: 0; /* Remove border-radius */
+  }
+
+  .content {
+    padding: 20px; /* Add padding for small screens */
+  }
+}
+
+/* Add more media queries for larger screens if needed */
