@@ -30,7 +30,7 @@ const Dashboard = () => {
         <div>
           <ul>
             <li>
-              <Link to="#">
+              <Link to="/HomeDashboard">
                 <BsGrid />
                 <span>Dashboard</span>
               </Link>

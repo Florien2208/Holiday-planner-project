@@ -10,6 +10,7 @@ import Login from "./pages/LoginForn";
 import Signup from "./pages/SignupForm";
 import Tour from "./pages/Tour";
 import Dashboard from "./component/Dashboard";
+import HomeDashboard from "./component/HomeDashboard";
 import Header from "./pages/Header";
 import Footer from "./pages/Test";
 import About from "./pages/About";
@@ -70,15 +71,17 @@ function App() {
             <Route path="/LoginForn" element={<Login />} />
             <Route path="/SignupForm" element={<Signup />} />
             <Route path="/Navbar" element={<Navbar />} />
-            {/* <Route path="/TourDashboard" element={<TourDashboard />} /> */}
+
             {/* <Route path="/UserDashboard" element={<UserDashboard />} /> */}
 
             {/* <Route path="/SideBarDashboard" element={<SideBarDashboard />} /> */}
 
             <Route path="/" element={<Applayout1 />}>
-              <Route path="/Dashboard" element={<Dashboard />} />
+              <Route path="/HomeDashboard" element={<HomeDashboard />} />
+              {/* <Route path="/Dashboard" element={<Dashboard />} /> */}
               <Route path="/UserDashboard" element={<UserDashboard />} />
               <Route path="/TourDashboard" element={<TourDashboard />} />
+
               {/* <UserDashboard/> */}
             </Route>
             {/* <Route path="/Dashboard" element={<Dashboard />} /> */}

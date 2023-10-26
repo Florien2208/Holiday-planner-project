@@ -65,9 +65,10 @@
 }
 .dash-card-container{
     flex-direction: row;
-    margin-left: 130px;
-    margin-top: 90px;
-    margin-right: 200px;
+    /* margin-left: 130px; */
+    /* margin-top: 90px; */
+    /* margin-right: 200px; */
+    color: #000;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Create three equal columns per row */
     gap: 10px; /* Adjust the gap between photos as needed */

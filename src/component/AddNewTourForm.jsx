@@ -36,7 +36,7 @@ function TourForm( ) {
   };
     const resetForm = () => {
       setFormData({
-        name: "",
+        destination: "",
         backdropImage: null,
         title: "",
         Gallery: "",
@@ -52,7 +52,7 @@ function TourForm( ) {
   const onsubmit = async(data) =>
   {
     const formData = new FormData();
-    formData.append("name", data.name);
+    formData.append("destination", data.destination);
     formData.append("Title", data.title);
     formData.append("backdropImage", data.image[0]);
     formData.append("Gallery", data.Gallery[0]);
@@ -127,10 +127,10 @@ function TourForm( ) {
           <label htmlFor="destination">Destination</label>
           <input
             type="text"
-            name="name"
-            id="name"
+            name="destination"
+            id="destination"
             placeholder="name"
-            {...register("name", { required: true })}
+            {...register("destination", { required: true })}
             // value={formData.destination}
             // onChange={handleInputChange}
           />
@@ -141,6 +141,7 @@ function TourForm( ) {
             type="text"
             name="title"
             id="title"
+            required
             placeholder="title"
             {...register("title", { required: true })}
             // onChange={handleImageChange}

@@ -1,7 +1,10 @@
 .user31 {
-    margin-left: 260px;
+    /* margin-left: 260px;
 
-    margin-top: 90px;
+    margin-top: 90px; */
+    padding:20px;
+    color: black;
+    max-width: 100%
 }
 .user32{
     display: flex;
@@ -11,12 +14,13 @@
 .custom-table {
   border-collapse: collapse;
   width: 100vh;
+  margin-top:20px;
 }
 
 .custom-table th, .custom-table td {
   border: 1px solid #ccc;
   padding: 15px;
-  padding-left: 80px;
+  padding-left: 67px;
   text-align: left;
 }
 
@@ -53,3 +57,10 @@
 }
 
 /* Add additional styles as needed */
+.userbutton{
+  display: flex;
+  align-content: flex-end;
+  width: 150px;
+  margin-top: 0;
+
+}

@@ -85,3 +85,32 @@ ul li a {
 }
 
 /* Add more media queries for larger screens if needed */
+.userbutton{
+  display: flex;
+  align-content: flex-end;
+  width: 30px;
+
+}
+/* Add responsive styles for screens smaller than 768px */
+@media (max-width: 767px) {
+  .dashboard {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+
+  .sidebar {
+    width: 100%; /* Take full width on smaller screens */
+    border-radius: 0; /* Remove border-radius */
+  }
+
+  .content {
+    padding: 20px; /* Add padding for small screens */
+  }
+
+  ul li a {
+    font-size: 16px; /* Adjust the font size for smaller screens */
+  }
+
+  ul li svg {
+    margin-right: 12px; /* Increase margin for smaller screens */
+  }
+}

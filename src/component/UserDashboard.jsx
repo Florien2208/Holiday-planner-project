@@ -9,7 +9,6 @@ const UserDashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
 
   const apiUrl = "https://holiday-api-zj3a.onrender.com/api/v1/auth/users";
-  
 
   useEffect(() => {
     // Fetch user data from the API
@@ -17,7 +16,7 @@ const UserDashboard = () => {
       .get(apiUrl)
       .then((response) => {
         setUserData(response.data);
-         console.log("Fetched user data:", response.data);
+        console.log("Fetched user data:", response.data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -46,13 +45,20 @@ const UserDashboard = () => {
       });
   };
 
+
+  
+  
   const handleDelete = (user) => {
+    console.log("Attempting to delete user:", user);
     const confirmDelete = window.confirm(
       `Are you sure you want to delete ${user.fullNames}?`
     );
     if (confirmDelete) {
       axios
-        .delete(apiUrl + `/${user.id}`)
+        .delete(
+          `https://holiday-api-zj3a.onrender.com/api/v1/auth/users/delete/${user.email}`
+          
+        )
         .then(() => {
           const updatedUserData = userData.filter((u) => u.id !== user.id);
           setUserData(updatedUserData);
@@ -68,32 +74,38 @@ const UserDashboard = () => {
       <div>
         <h2>User Dashboard</h2>
         <br />
-        <table className="custom-table">
-          <thead>
-            <tr>
-              <th>Names</th>
-              <th>Email</th>
-              {/* <th>Passwords</th> */}
-              <th>Edit</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            {userData.map((user, index) => (
-              <tr key={index}>
-                <td>{user.fullNames}</td>
-                <td>{user.email}</td>
-                {/* <td>{user.password}</td> */}
-                <td>
-                  <button onClick={() => handleEdit(user)}>Edit</button>
-                </td>
-                <td>
-                  <button onClick={() => handleDelete(user)}>Delete</button>
-                </td>
+        <div className="user-dashboard-container">
+          <div className="userbutton">
+            <button className="add-new-user-button">Add New User</button>
+          </div>
+          <br/>
+          <table className="custom-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Names</th>
+                <th>Email</th>
+                <th>Edit</th>
+                <th>Delete</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {userData.map((user, index) => (
+                <tr key={index}>
+                  <td>{index+1}</td>
+                  <td>{user.fullNames}</td>
+                  <td>{user.email}</td>
+                  <td>
+                    <button onClick={() => handleEdit(user)}>Edit</button>
+                  </td>
+                  <td>
+                    <button onClick={() => handleDelete(user)}>Delete</button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
       {isModalOpen && (
         <UserEditModal
