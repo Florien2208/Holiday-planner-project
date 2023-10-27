@@ -5,8 +5,8 @@ import {
   BsGrid,
 
 } from "react-icons/bs";
-import { FaUsers } from "react-icons/Fa";
-import { TbBrandBooking } from "react-icons/Tb";
+import { FaUsers } from "react-icons/fa";
+import { TbBrandBooking } from "react-icons/tb";
 import { HiOutlineLogout } from "react-icons/hi";
 import { CiLocationOn } from "react-icons/ci";
 import { GiCommercialAirplane } from "react-icons/gi";
