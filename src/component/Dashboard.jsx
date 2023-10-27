@@ -1,15 +1,12 @@
-// Dashboard.js
-
-
 import { Link } from "react-router-dom";
-import "./Dashboard.css"; // Import your CSS file
-import pro from "../images/djflo.jpg";
+import "./Dashboard.css"; 
+
 import {
   BsGrid,
 
 } from "react-icons/bs";
+import { FaUsers } from "react-icons/Fa";
 import { TbBrandBooking } from "react-icons/Tb";
-// import { FaUmbrellaBeach } from "react-icons/Fa";
 import { HiOutlineLogout } from "react-icons/hi";
 import { CiLocationOn } from "react-icons/ci";
 import { GiCommercialAirplane } from "react-icons/gi";
@@ -56,11 +53,12 @@ const Dashboard = () => {
             <br />
             <br />
             <li>
-              <TbBrandBooking />
+              <FaUsers />
               <Link to="/UserDashboard">Users</Link>
             </li>
           </ul>
-          <br/><br/>
+          <br />
+          <br />
           <br />
           <br />
           <br />
