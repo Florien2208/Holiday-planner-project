@@ -9,8 +9,8 @@ const LoginForn = () => {
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
-  const handleSubmit = async () => {
-    
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     // TODO: Implement login logic here
     const userData = {
       email,
@@ -26,16 +26,12 @@ const LoginForn = () => {
           },
           body: JSON.stringify(userData),
         }
-        );
-        if (response) {
-        localStorage.setItem("islogin",JSON.stringify(response));
+      );
+      if (response.ok) {
         // Instead of using useHistory, use the Link component for navigation
         // return <Link to="/dashboard" />;
         alert("login successfully");
         navigate("/HomeDashboard");
-        // let user = JSON.parse(localStorage.getItem("islogin"));
-        // let token = user?.access_token;
-        // console.log(token);
       } else {
         alert("Invalid Email or Password");
       }

@@ -76,7 +76,7 @@ function TourDashboard() {
         )}
         <div className="dash-card-container">
           {card_data.map((card, index) => (
-            <div className="card" key={index}>
+            <div className="cardtourdashboard" key={index}>
               <img src={card.backdropImage} alt={card.Title} />
               <div className="card-content">
                 <h2>{card.Title}</h2>

@@ -285,7 +285,7 @@ function Tour() {
                               </div>
                               <div className="booknowbuttontour">
                                 <div className="a">
-                                  <Link to={`/tour/${item._id}`}>
+                                  <Link to="/SingleTour">
                                     <span className="secbtntour">Book Now</span>
                                   </Link>
                                 </div>

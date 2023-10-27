@@ -21,6 +21,7 @@ import SideBarDashboard from "./component/SideBarDashboard";
 import UserDashboard from "./component/UserDashboard";
 import { AppProvider } from "./component/usecontext";
 import TourDashboard from "./component/TourDashboard";
+import SingleTour from "./pages/SingleTour"
  const Applayout= ()=>{
  return(
  <>
@@ -57,6 +58,7 @@ function App() {
               <Route path="/Tour" element={<Tour />} />
               <Route path="/" element={<Home />} />
               <Route path="/About" Component={About} />
+              <Route path="/SingleTour" element={<SingleTour />} />
             </Route>
             {/* <Switch>
             <Route path="/login" component={LoginForn} />
@@ -71,8 +73,6 @@ function App() {
             <Route path="/LoginForn" element={<Login />} />
             <Route path="/SignupForm" element={<Signup />} />
             <Route path="/Navbar" element={<Navbar />} />
-
-            {/* <Route path="/UserDashboard" element={<UserDashboard />} /> */}
 
             {/* <Route path="/SideBarDashboard" element={<SideBarDashboard />} /> */}
 

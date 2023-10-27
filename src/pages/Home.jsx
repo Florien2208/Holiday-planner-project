@@ -14,6 +14,7 @@ import a3 from "../images/down2.jpg";
 import mountain from "../images/mountain.jpg";
 import woo from "../images/image.jpg";
 import small from "../images/about-home.jpg";
+import { Link } from "react-router-dom";
 // import Com1 from "../assets/comp1";
 function Home() {
     // const [isOpen, setIsOpen] = useState(false);
@@ -118,11 +119,8 @@ const containerStyle1 = {
                 </div>
               </div>
             </div>
-
-           
           </div>
         </section>
-        
 
         <br />
         <br />
@@ -233,7 +231,6 @@ const containerStyle1 = {
               <div className="row">
                 <div className="col-lg-6">
                   <div className="about-image-wp">
-                    
                     <div
                       style={containerStyle1}
                       className="about-image-box small wow fadeup-animation"
@@ -380,7 +377,10 @@ const containerStyle1 = {
                                 title="Book Now"
                                 className="sec-btn"
                               >
-                                <span>Book Now</span>
+                                
+                                  <span>Book Now</span>
+                                
+                                
                               </a>
                             </div>
                           </div>

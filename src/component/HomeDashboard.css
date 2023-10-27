@@ -20,7 +20,7 @@
   margin: 15px 0;
 }
 
-.card {
+.cardashboard {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -28,19 +28,19 @@
   border-radius: 5px;
 }
 
-.card:first-child {
+.cardashboard:first-child {
   background-color: #2962ff;
 }
 
-.card:nth-child(2) {
+.cardashboard:nth-child(2) {
   background-color: #ff6d00;
 }
 
-.card:nth-child(3) {
+.cardashboard:nth-child(3) {
   background-color: #2e7d32;
 }
 
-.card:nth-child(4) {
+.cardashboard:nth-child(4) {
   background-color: #d50000;
 }
 
