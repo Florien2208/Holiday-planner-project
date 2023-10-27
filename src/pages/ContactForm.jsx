@@ -1,6 +1,6 @@
-// ContactPage.js
-import React, { useState } from "react";
-import "../pages/Contact.css";
+
+import { useState } from "react";
+import "../pages/contact.css";
 function LoginForm() {
   const [formData, setFormData] = useState({
     fullName: "",
