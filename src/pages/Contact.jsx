@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "../pages/contact.css";
+import axios from "axios";
+import Notiflix from "notiflix";
 import {
   FaUser,
   FaEnvelope,
@@ -27,7 +29,64 @@ function contact() {
     backgroundPosition: "center center",
     backgroundColor: "#c29d59",
   };
+const [formData, setFormData] = useState({
+  email: "",
+  message: "",
+  fullName: "",
+  service: "",
+  phoneNumber: "",
+});
 
+ const[fullName,setFullname]=useState("");
+ const [email, setEmail] = useState("");
+ const [phoneNumber, setPhoneNumber] = useState("");
+ const [services, setServices] = useState("");
+  const [message, setMessage] = useState("");
+//   const payload={
+//     fullName,
+//     email,
+//     phoneNumber,
+//     services,
+//     message
+
+const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Make a POST request to the API to submit the form data
+    axios
+      .post(
+        "https://holiday-api-zj3a.onrender.com/api/v1/cont/contact",
+        {
+           fullName: fullName,
+    email: email,
+    phoneNumber: phoneNumber,
+    services: services,
+    message: message,
+        }
+      )
+      .then((response) => {
+        setIsFormSubmitted(true);
+        // You can handle success here
+        setFormData({
+          message: "",
+          fullName: "",
+          email: "",
+          phoneNumber: "",
+          service: "",
+        });
+        Notiflix.Notify.info("Your Message Submitted Successfully!");
+      })
+      .catch((error) => {
+        console.error("Error submitting the form: ", error);
+        // You can handle errors here
+      });
+  };
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
   return (
     <main className="">
       <div className="contactherocontact" style={backgroundStyle}>
@@ -43,57 +102,65 @@ function contact() {
             <div className="col8contact">
               <div className="leftsidecontact">
                 <div className="contactformcontact">
-                  <form>
+                  <form onSubmit={handleSubmit}>
                     <div className="rowcontact ">
                       <div className="contactforminputcontact col-6">
                         <span className="inputboxcontact">
-                          <span className="icon">
+                          {/* <span className="icon">
                             <FaUser />
-                          </span>
+                          </span> */}
                           <input
                             required
                             type="text"
                             placeholder="Full Name *"
                             className="forminputcontact"
+                            value={fullName}
+                            onChange={(e) => setFullname(e.target.value)}
                           />
                         </span>
                       </div>
                       <div className="contactforminputcontact col-6">
                         <span className="inputboxcontact">
-                          <span className="icon">
+                          {/* <span className="icon">
                             <FaEnvelope />
-                          </span>
+                          </span> */}
                           <input
                             required
                             type="email"
                             placeholder="Email *"
                             className="forminputcontact"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                           />
                         </span>
                       </div>
                       <div className="contactforminputcontact col-6">
                         <span className="inputboxcontact">
-                          <span className="icon">
+                          {/* <span className="icon">
                             <FaPhoneAlt />
-                          </span>
+                          </span> */}
                           <input
                             required
                             type="number"
                             placeholder="Phone *"
                             className="forminputcontact"
+                            value={phoneNumber}
+                            onChange={(e) => setPhoneNumber(e.target.value)}
                           />
                         </span>
                       </div>
                       <div className="contactforminputcontact col-6">
                         <span className="inputboxcontact">
-                          <span className="icon">
+                          {/* <span className="icon">
                             <FaBook />
-                          </span>
+                          </span> */}
                           <input
                             required
                             type="text"
                             placeholder="Services *"
                             className="forminputcontact"
+                            value={services}
+                            onChange={(e) => setServices(e.target.value)}
                           />
                         </span>
                       </div>
@@ -102,9 +169,12 @@ function contact() {
                           <textarea
                             required
                             placeholder="Message *"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
                             cols={30}
                             rows={4}
                             className="forminputcontact"
+                            // onChange={(e) => setMessage(e.target.value)}
                           ></textarea>
                         </span>
                       </div>
@@ -118,6 +188,7 @@ function contact() {
                     </div>
                   </form>
                 </div>
+                {isFormSubmitted && <p>Form submitted successfully!</p>}
               </div>
             </div>
             <div className="col4contact">

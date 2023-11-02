@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import { FaTimes } from "react-icons/fa";
 
-// import logo from "../assets/logo.png";
 import whiteLogo from "../images/white-logo.png";
 import logoIconwhite from "../images/logo-icon-white.svg";
 import "../pages/Navbar.css";

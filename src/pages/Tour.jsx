@@ -1,5 +1,6 @@
 import React from "react";
 import "../pages/Tour.css";
+import { mycontext } from "../component/usecontext";
 import {
   FaAngleRight,
   FaArrowDown,
@@ -19,74 +20,74 @@ import tourBanner from "../images/about1.jpg";
 // import tourBoxImg2 from "../images/down1.jpg";
 // import tourBoxImg3 from "../images/about1.jpg";
 import gaqBg from "../images/about1.jpg";
-export const tourlistMock = [
-  {
-    name: "Kenya",
-    img: "https://html.geekcodelab.com/holiday-planners/assets/images/tour-box-image1.jpg",
-    title: "Holiday Planners is a World Leading Online Tour Booking Platform",
-    Description:
-      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.",
-    price: "$1200",
-    discount: "15%",
-    users: "15+ peoples",
-    duration: "6Days 3Hours",
-  },
-  {
-    name: "GREECE",
-    img: "https://html.geekcodelab.com/holiday-planners/assets/images/tour-box-image2.jpg",
-    title: "Holiday Planners is a World Leading Online Tour Booking Platform",
-    Description:
-      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.",
-    price: "$2500",
-    discount: "45%",
-    users: "65+ peoples",
-    duration: "2Days 1Hour",
-  },
-  {
-    name: "RWANDA",
-    img: "https://html.geekcodelab.com/holiday-planners/assets/images/tour-box-image4.jpg",
-    title: "Holiday Planners is a World Leading Online Tour Booking Platform",
-    Description:
-      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.",
-    price: "$1200",
-    discount: "5%",
-    users: "34+ peoples",
-    duration: "1Day 12Hours",
-  },
-  {
-    name: "SWITZLAND",
-    img: "https://html.geekcodelab.com/holiday-planners/assets/images/tour-box-image1.jpg",
-    title: "Holiday Planners is a World Leading Online Tour Booking Platform",
-    Description:
-      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.",
-    price: "$1200",
-    discount: "8%",
-    users: "23+ peoples",
-    duration: " 7Hours",
-  },
-  {
-    name: "USA",
-    img: "https://html.geekcodelab.com/holiday-planners/assets/images/tour-box-image2.jpg",
-    title: "Holiday Planners is a World Leading Online Tour Booking Platform",
-    Description:
-      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.",
-    price: "$1200",
-    discount: "3%",
-    users: "15+ peoples",
-    duration: "8Days 2Hours",
-  },
-  {
-    name: "CANADA",
-    img: "https://html.geekcodelab.com/holiday-planners/assets/images/tour-box-image4.jpg",
-    title: "Holiday Planners is a World Leading Online Tour Booking Platform",
-    Description:
-      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.",
-    price: "$1200",
-    discount: "10%",
-    users: "95+peoples",
-    duration: "1Day 23Hours",
-  },
-];
+// export const tourlistMock = [
+//   {
+//     name: "Kenya",
+//     img: "https://html.geekcodelab.com/holiday-planners/assets/images/tour-box-image1.jpg",
+//     title: "Holiday Planners is a World Leading Online Tour Booking Platform",
+//     Description:
+//       "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.",
+//     price: "$1200",
+//     discount: "15%",
+//     users: "15+ peoples",
+//     duration: "6Days 3Hours",
+//   },
+//   {
+//     name: "GREECE",
+//     img: "https://html.geekcodelab.com/holiday-planners/assets/images/tour-box-image2.jpg",
+//     title: "Holiday Planners is a World Leading Online Tour Booking Platform",
+//     Description:
+//       "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.",
+//     price: "$2500",
+//     discount: "45%",
+//     users: "65+ peoples",
+//     duration: "2Days 1Hour",
+//   },
+//   {
+//     name: "RWANDA",
+//     img: "https://html.geekcodelab.com/holiday-planners/assets/images/tour-box-image4.jpg",
+//     title: "Holiday Planners is a World Leading Online Tour Booking Platform",
+//     Description:
+//       "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.",
+//     price: "$1200",
+//     discount: "5%",
+//     users: "34+ peoples",
+//     duration: "1Day 12Hours",
+//   },
+//   {
+//     name: "SWITZLAND",
+//     img: "https://html.geekcodelab.com/holiday-planners/assets/images/tour-box-image1.jpg",
+//     title: "Holiday Planners is a World Leading Online Tour Booking Platform",
+//     Description:
+//       "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.",
+//     price: "$1200",
+//     discount: "8%",
+//     users: "23+ peoples",
+//     duration: " 7Hours",
+//   },
+//   {
+//     name: "USA",
+//     img: "https://html.geekcodelab.com/holiday-planners/assets/images/tour-box-image2.jpg",
+//     title: "Holiday Planners is a World Leading Online Tour Booking Platform",
+//     Description:
+//       "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.",
+//     price: "$1200",
+//     discount: "3%",
+//     users: "15+ peoples",
+//     duration: "8Days 2Hours",
+//   },
+//   {
+//     name: "CANADA",
+//     img: "https://html.geekcodelab.com/holiday-planners/assets/images/tour-box-image4.jpg",
+//     title: "Holiday Planners is a World Leading Online Tour Booking Platform",
+//     Description:
+//       "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.",
+//     price: "$1200",
+//     discount: "10%",
+//     users: "95+peoples",
+//     duration: "1Day 23Hours",
+//   },
+// ];
 function Tour() {
   const backgroundStyle = {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, .6), rgba(14,1,29,.5)), url(${tourBanner})`,
@@ -151,7 +152,7 @@ function Tour() {
   //       price: "$750",
   //       discount: "38% off",
   //     },]
-
+const { card_data } = mycontext();
   return (
     <>
       <section className="background_imagetour">
@@ -206,7 +207,7 @@ function Tour() {
                 </div>
                 <div className="">
                   <div className="rowtour">
-                    {tourlistMock.map((item, index) => (
+                    {/* {tourlistMock.map((item, index) => (
                       <div className="colrow6tour" key={index}>
                         <div className="tourboxtour">
                           <div
@@ -237,11 +238,7 @@ function Tour() {
                               <div className="rowtour">
                                 <div className="col6tour">
                                   <div className="tourinfotour">
-                                    {/* <div className="tour-info-icon">
-                                    <div className="i">
-                                      <FaClock />
-                                    </div>
-                                  </div> */}
+                                   
                                     <div className="tourinfocontenttour">
                                       <h5 className="h6titletour">Duration</h5>
                                       <p
@@ -257,11 +254,7 @@ function Tour() {
                                 </div>
                                 <div className="col6tour">
                                   <div className="tourinfotour">
-                                    {/* <div className="tour-info-icon">
-                                    <div className="i">
-                                      <FaUserFriends />
-                                    </div>
-                                  </div> */}
+                                    
                                     <div className="tourinfocontenttour">
                                       <h5 className="h6titletour">
                                         Group Size
@@ -290,6 +283,35 @@ function Tour() {
                                   </Link>
                                 </div>
                               </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))} */}
+                    {card_data.map((card, index) => (
+                      <div className="cardtourdashboard" key={index}>
+                        <img src={card.backdropImage} alt={card.Title} />
+                        <div className="card-content">
+                          <h2>{card.Title}</h2>
+                          <p>{card.Description}</p>
+                          <div className="card-details">
+                            <div className="card-duration">
+                              <label htmlFor="">Duration</label>
+                              <p>{card.Duration}</p>
+                            </div>
+                            <div className="card-group-size">
+                              <label htmlFor="">Group Size</label>
+                              <p>{card.GroupSize}</p>
+                            </div>
+                          </div>
+                          <div className="card-booking">
+                            <div className="card-amount">
+                              <h3>${card.Price}</h3>
+                            </div>
+                            <div className="card-button">
+                              <Link to="/SingleTour">
+                                <button>Book Now</button>
+                              </Link>
                             </div>
                           </div>
                         </div>
@@ -344,9 +366,9 @@ function Tour() {
                         <div className="colrow12tour">
                           <span className="formcontrolspantour">
                             <span className="icon">
-                              <div className="i">
+                              {/* <div className="i">
                                 <FaMapMarker />
-                              </div>
+                              </div> */}
                             </span>
                             <input
                               type="text"
@@ -358,9 +380,9 @@ function Tour() {
                         <div className="colrow12tour">
                           <span className="formcontrolspantour">
                             <span className="icon">
-                              <div className="i">
+                              {/* <div className="i">
                                 <FaCalendar />
-                              </div>
+                              </div> */}
                             </span>
                             <select className="forminputtour">
                               <option>Month</option>

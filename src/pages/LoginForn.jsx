@@ -18,7 +18,7 @@ const LoginForn = () => {
     };
     try {
       const response = await fetch(
-        "https://holiday-api-zj3a.onrender.com/api/v1/auth/login",
+        "https://holiday-planer-project.onrender.com/holidays/users/login",
         {
           method: "POST",
           headers: {
@@ -30,8 +30,17 @@ const LoginForn = () => {
       if (response.ok) {
         // Instead of using useHistory, use the Link component for navigation
         // return <Link to="/dashboard" />;
+
         alert("login successfully");
-        navigate("/HomeDashboard");
+        const data = await response.json();
+        const { access_token } = data;
+        console.log(data);
+         localStorage.setItem("access_token", access_token);
+        if (data.user.role == "admin") {
+          navigate("/HomeDashboard");
+        } else {
+          navigate("/");
+        }
       } else {
         alert("Invalid Email or Password");
       }
@@ -57,7 +66,6 @@ const LoginForn = () => {
           <br />
           <div className="Test">
             <h1 style={{ color: "black" }}>Login Form</h1>
-          
             <br />
             Email
             <input

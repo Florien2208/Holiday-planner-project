@@ -6,7 +6,7 @@ import SuccessPopup from "./SuccessPopup";
 function TourForm( ) {
   
   const [formData, setFormData] = useState({
-    name: "",
+    destination: "",
     backdropImage: null,
     title: "",
     Gallery: "",
@@ -53,7 +53,7 @@ function TourForm( ) {
   {
     const formData = new FormData();
     formData.append("destination", data.destination);
-    formData.append("Title", data.title);
+    formData.append("title", data.title);
     formData.append("backdropImage", data.image[0]);
     formData.append("Gallery", data.Gallery[0]);
      formData.append("Duration", data.Duration);
@@ -120,7 +120,7 @@ function TourForm( ) {
 
   return (
     <div className="tour-form-container">
-      <h2>Add New Tour</h2>
+      <h2 style={{ color: "#c29d59" }}>Add New Tour</h2>
       {/* {successMessage && <p>{successMessage}</p>} */}
       <form onSubmit={handleSubmit(onsubmit)}>
         <div className="form-group">

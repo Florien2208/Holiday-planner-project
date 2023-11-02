@@ -22,6 +22,8 @@ import UserDashboard from "./component/UserDashboard";
 import { AppProvider } from "./component/usecontext";
 import TourDashboard from "./component/TourDashboard";
 import SingleTour from "./pages/SingleTour"
+import TourEditDashboard from "./component/TourEditDashboard";
+import ContactDashboard from "./common/ContactDashboard";
  const Applayout= ()=>{
  return(
  <>
@@ -73,12 +75,12 @@ function App() {
             <Route path="/LoginForn" element={<Login />} />
             <Route path="/SignupForm" element={<Signup />} />
             <Route path="/Navbar" element={<Navbar />} />
-
-            {/* <Route path="/SideBarDashboard" element={<SideBarDashboard />} /> */}
+            {/* <Route path="/ContactDashboard" element={<ContactDashboard />} /> */}
+            <Route path="/TourEditDashboard" element={<TourEditDashboard />} />
 
             <Route path="/" element={<Applayout1 />}>
               <Route path="/HomeDashboard" element={<HomeDashboard />} />
-              {/* <Route path="/Dashboard" element={<Dashboard />} /> */}
+              <Route path="/ContactDashboard" element={<ContactDashboard />} />
               <Route path="/UserDashboard" element={<UserDashboard />} />
               <Route path="/TourDashboard" element={<TourDashboard />} />
 

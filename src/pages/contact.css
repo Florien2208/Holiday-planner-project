@@ -103,6 +103,7 @@
 .col12contact {
   flex: 0 0 100%;
   max-width: 100%;
+  
 }
 
 
@@ -149,6 +150,7 @@
   position: relative;
   width: 100%;
   display: block;
+  margin:auto
 }
 
 .inputboxcontact .icon {
@@ -395,4 +397,8 @@ hr {
   width: calc(100% + 430px);
   height: 100%;
   z-index: 1;
+}
+form .inputboxcontact{
+  display: flex;
+  margin: 15px;
 }

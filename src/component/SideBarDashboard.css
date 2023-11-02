@@ -22,7 +22,7 @@
 
 
 
-.grid-container {
+/* .grid-container {
   display: grid;
   grid-template-columns: 260px 1fr 1fr 1fr;
   grid-template-rows: 0.2fr 3fr;
@@ -31,7 +31,7 @@
     'sidebar main main main';
   height: 100vh;
   
-}
+} */
 
 /* Header  */
 .header {
@@ -42,10 +42,11 @@
   justify-content: space-between;
   padding: 0 20px 0 80px;
   box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
-  margin-right: 40px;
+  margin-right: 0px;
   border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  background-color: #eaecef;
+  border-bottom-right-radius:30px;
+  background-color: white;
+  border: 1px solid black;
   
 }
 

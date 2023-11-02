@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 const SignupForm = () => {
   const [fullNames, setfullNames] = useState("");
   const [email, setEmail] = useState("");
+  const [phoneNo, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -22,10 +23,11 @@ const SignupForm = () => {
 
     try {
       const response = await axios.post(
-        "https://holiday-api-zj3a.onrender.com/api/v1/auth/signup",
+        "https://holiday-planer-project.onrender.com/holidays/users/signup",
         {
           fullNames,
           email,
+          phoneNo,
           password,
         }
       );
@@ -33,9 +35,10 @@ const SignupForm = () => {
       // Handle the response here, e.g., show a success message or redirect to login page
       console.log("User registered successfully", response.data);
       alert("registered successfully");
-      // Clear the 
-      setfullNames("")
+      // Clear the
+      setfullNames("");
       setEmail("");
+      setPhone("");
       setPassword("");
       setConfirmPassword("");
     } catch (error) {
@@ -85,6 +88,15 @@ const SignupForm = () => {
             />
             <br />
             <br />
+            Phone number
+            <input
+              type="numbers"
+              placeholder="phone number"
+              value={phoneNo}
+              onChange={(event) => setPhone(event.target.value)}
+            />
+            <br />
+            <br />
             Password
             <input
               type="password"
@@ -104,8 +116,8 @@ const SignupForm = () => {
             <br />
             <br />
             <button type="submit">Signup</button>
-            <br/>
-            <br/>
+            <br />
+            <br />
             <div className="form-links">
               <h3 style={{ color: "black" }}>Back to</h3>
               <Link to="/LoginForn" style={{ color: "black" }}>

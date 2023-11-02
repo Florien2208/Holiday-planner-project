@@ -20,7 +20,7 @@
 .custom-table th, .custom-table td {
   border: 1px solid #ccc;
   padding: 15px;
-  padding-left: 67px;
+  padding-left: 25px;
   text-align: left;
 }
 
@@ -63,4 +63,9 @@
   width: 150px;
   margin-top: 0;
 
+}
+.userda{
+  border: none;
+  border-radius: 15px;
+  width: 5rem;
 }

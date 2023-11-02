@@ -6,14 +6,19 @@
 }
 
 .sidebar {
-  background-color: #eaecef;
-  width: 250px; 
+  background-color: white;
+  width: 257px; 
   padding: 20px;
   height: 100vh;
    position: fixed;
-  border-top-right-radius: 4rem;
-  border-bottom-right-radius: 4rem;
+   border: 1px solid black;
+  
 }
+ .sidebardashboard ul li a:hover{
+        color: #C29D59;
+        text-decoration: line-through;
+        transition: text-decoration 0.3s
+    }
 
 .sidebar h2 {
   font-size: 24px;
@@ -71,9 +76,16 @@ ul li a {
 .logoutdashboard{
   display: flex;
   align-items: end;
+  
+}
+.logoutdashboard a:hover{
+       color: #C29D59;
+        text-decoration: line-through;
+        transition: text-decoration 0.3s
+    
 }
 /* Add responsive styles for screens smaller than 768px */
-@media (max-width: 767px) {
+@media (max-width: 6px) {
   .sidebar {
     width: 100%; /* Take full width on small screens */
     border-radius: 0; /* Remove border-radius */
@@ -113,4 +125,16 @@ ul li a {
   ul li svg {
     margin-right: 12px; /* Increase margin for smaller screens */
   }
+}
+.djflo{
+  display: flex;
+}
+.djflo1 img{
+  border-radius: 50%;
+  height: 80px;
+}
+.djflo2{
+  margin: auto;
+  margin-left: 5px;
+  color: #ff8f00;
 }

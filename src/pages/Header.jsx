@@ -2,6 +2,7 @@ import React from 'react'
 import img from "../images/logo.png";
 import { Link } from "react-router-dom";
 import { FaFacebookF } from "react-icons/fa";
+import { BsTwitter, BsInstagram, BsSearch } from "react-icons/bs";
 function Header() {
   return (
     <div>
@@ -35,13 +36,11 @@ function Header() {
               <div className="col-lg-4">
                 <ul className="header-social">
                   <li>
-                    <a
-                      href="FaFacebookF"
-                      icon={FaFacebookF}
-                      title="Follow us on Facebook"
-                    >
+                    <a href="FaFacebookF" title="Follow us on Facebook">
                       <span className="icon">
-                        <i className="fab fa-facebook-f"></i>
+                        <i className="fabfafacebookf">
+                          <FaFacebookF />
+                        </i>
                       </span>
                     </a>
                   </li>
@@ -51,14 +50,18 @@ function Header() {
                       title="Follow us on Instagram"
                     >
                       <span className="icon">
-                        <i className="fab fa-instagram"></i>
+                        <i className="fabfafacebookf">
+                          <BsInstagram />
+                        </i>
                       </span>
                     </a>
                   </li>
                   <li>
                     <a href="javascript:void(0);" title="Follow us on Twitter">
                       <span className="icon">
-                        <i className="fab fa-twitter"></i>
+                        <i className="fabfafacebookf">
+                          <BsTwitter />
+                        </i>
                       </span>
                     </a>
                   </li>
@@ -87,7 +90,7 @@ function Header() {
                     </div>
                     <div className="search-wp">
                       <div className="search-icon">
-                        <i className="fas fa-search"></i>
+                        <i className="fas fa-search"><BsSearch/></i>
                         <i className="fas fa-times"></i>
                       </div>
                       <div className="search-overlay">

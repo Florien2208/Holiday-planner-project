@@ -5,8 +5,10 @@ import "../component/TourDashboard.css";
 import TourForm from "./AddNewTourForm";
 import { mycontext } from "../component/usecontext";
 import  { useState } from "react";
+import EditTourForm from "../component/TourEditDashboard";
 function TourDashboard() {
  const [isModalOpen, setIsModalOpen] = useState(false);
+ const [editTour, setEditTour] = useState(null);
  const { card_data, setCards } = mycontext();
 
  const handleConfirmDelete = async (_id) => {
@@ -44,33 +46,54 @@ function TourDashboard() {
  const closeModal = () => {
    setIsModalOpen(false);
  };
-   const handleDelete = async (tourId) => {
-    try {
-     await axios.delete(
-       `https://holiday-api-zj3a.onrender.com/api/v1/tour/delete${tourId}`
-     );
-
-      // If the delete request is successful, update the local state
-      const updatedCardData = card_data.filter((tour) => tour.id !== tourId);
-      setCards(updatedCardData);
-    } catch (error) {
-      console.error("Error deleting tour:", error);
-      // Handle the error, e.g., show an error message to the user
-    }
+ 
+  const openEditModal = (tour) => {
+    setEditTour(tour); // Set the tour to edit
+    setIsModalOpen(true); // Open the modal
   };
+
+  const closeEditModal = () => {
+    setEditTour(null); // Reset the edited tour
+    setIsModalOpen(false); // Close the modal
+  };
+  //  const handleDelete = async (tourId) => {
+  //   try {
+  //    await axios.delete(
+  //      `https://holiday-api-zj3a.onrender.com/api/v1/tour/delete${tourId}`
+  //    );
+
+      
+  //     const updatedCardData = card_data.filter((tour) => tour.id !== tourId);
+  //     setCards(updatedCardData);
+  //   } catch (error) {
+  //     console.error("Error deleting tour:", error);
+      
+  //   }
+  // };
   console.log(card_data);
 
   return (
     <div className="dash-card-container">
-      <div className="tour-container">
-        <button onClick={openModal}>Add New Tour</button>
+      <div className="tourcontainerdash">
+        <button className="bat" onClick={openModal}>
+          Add New Tour
+        </button>
+       
         {isModalOpen && (
           <div className="modal">
             <div className="modal-content">
               <span className="close" onClick={closeModal}>
                 &times;
               </span>
-              <TourForm closeModal={closeModal} />
+              {editTour ? ( // Render edit form if editTour is not null
+                <EditTourForm
+                  tour={editTour}
+                  closeEditModal={closeEditModal}
+                  setCards={setCards}
+                />
+              ) : (
+                <TourForm closeModal={closeModal} />
+              )}
             </div>
           </div>
         )}
@@ -95,11 +118,16 @@ function TourDashboard() {
                   <div className="card-amount">
                     <h3>${card.Price}</h3>
                   </div>
-                  <div className="card-button">
-                    <button>Edit</button>
+                  <div className="cardbuttonbatta">
                     <button
+                      className="batta"
+                      onClick={() => openEditModal(card)}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      className="batta"
                       onClick={() => {
-                       
                         handleConfirmDelete(card._id);
                       }}
                     >
