@@ -4,8 +4,15 @@ import logoIconblack from "../images/logo.png";
 import mg from "../pages/image9.jpg";
 import axios from "axios"; // Import Axios
 import mg1 from "../pages/image9.jpg";
+// import { ToastContainer, toast } from "react-toastify";
 import { Link } from "react-router-dom";
 const SignupForm = () => {
+    // const notify = () => {
+    //   toast.success("This is a notification!", {
+    //     position: "top-right",
+    //     autoClose: 2000, // Time in milliseconds for the notification to auto-close
+    //   });
+    // };
   const [fullNames, setfullNames] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNo, setPhone] = useState("");
@@ -42,8 +49,13 @@ const SignupForm = () => {
       setPassword("");
       setConfirmPassword("");
     } catch (error) {
+      //  {
+      //    notify;
+      //  }
       // Handle API errors, e.g., display an error message
       console.error("Error during registration", error);
+      alert(" user with Email already exists")
+     
     }
   };
   return (

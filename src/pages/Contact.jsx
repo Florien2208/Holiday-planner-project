@@ -40,7 +40,7 @@ const [formData, setFormData] = useState({
  const[fullName,setFullname]=useState("");
  const [email, setEmail] = useState("");
  const [phoneNumber, setPhoneNumber] = useState("");
- const [services, setServices] = useState("");
+ const [service, setServices] = useState("");
   const [message, setMessage] = useState("");
 //   const payload={
 //     fullName,
@@ -62,7 +62,7 @@ const [isFormSubmitted, setIsFormSubmitted] = useState(false);
            fullName: fullName,
     email: email,
     phoneNumber: phoneNumber,
-    services: services,
+    service: service,
     message: message,
         }
       )
@@ -159,7 +159,7 @@ const [isFormSubmitted, setIsFormSubmitted] = useState(false);
                             type="text"
                             placeholder="Services *"
                             className="forminputcontact"
-                            value={services}
+                            value={service}
                             onChange={(e) => setServices(e.target.value)}
                           />
                         </span>

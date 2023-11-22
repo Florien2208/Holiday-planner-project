@@ -1,9 +1,16 @@
 import React from 'react'
+// import { useState, useEffect } from "react";
 import img from "../images/logo.png";
+import prof from "../images/prof.jpg";
+import "../pages/Header.css";
 import { Link } from "react-router-dom";
 import { FaFacebookF } from "react-icons/fa";
+import {BiSolidUser} from "react-icons/bi";
 import { BsTwitter, BsInstagram, BsSearch } from "react-icons/bs";
+
 function Header() {
+
+
   return (
     <div>
       <header className="site-header">
@@ -65,6 +72,13 @@ function Header() {
                       </span>
                     </a>
                   </li>
+                  <li>
+                    <div className="userprofileheader">
+                      <img src={prof} alt="User Avatar" />
+                      <p style={{color:"black"}}>Welcome, Guest</p>
+                      {/* Display other user profile information as needed */}
+                    </div>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -90,7 +104,9 @@ function Header() {
                     </div>
                     <div className="search-wp">
                       <div className="search-icon">
-                        <i className="fas fa-search"><BsSearch/></i>
+                        <i className="fas fa-search">
+                          <BsSearch />
+                        </i>
                         <i className="fas fa-times"></i>
                       </div>
                       <div className="search-overlay">

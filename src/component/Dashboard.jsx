@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Dashboard.css"; 
 
 import {
@@ -15,6 +15,13 @@ import logoIconblack from "../images/logo.png";
 import djflo from "../images/djflo.jpg";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    // Perform logout actions here, e.g., clearing user data, tokens, or local storage.
+    localStorage.removeItem("access_token");
+    // For this example, we'll simply reload the page to simulate logging out.
+    navigate("/");
+  };
   return (
     <div className="dashboard">
       <div className="sidebar">
@@ -23,12 +30,12 @@ const Dashboard = () => {
             <img src={logoIconblack} alt="logo-icon-white" />
           </Link>
         </div>
-        <br/>
+        <br />
         <div className="djflo">
           <div className="djflo1">
-            <img src={djflo}/>
-            </div>
-        <div className="djflo2">Admin</div>
+            <img src={djflo} />
+          </div>
+          <div className="djflo2">Admin</div>
         </div>
         <br />
         <div className="sidebardashboard">
@@ -81,12 +88,11 @@ const Dashboard = () => {
           </ul>
           <br />
           <br />
-          <br/>
           <div className="logoutdashboard">
-            <Link to="/dashboard/settings">
+            <button onClick={handleLogout}>
               <HiOutlineLogout />
               Logout
-            </Link>
+            </button>
           </div>
         </div>
       </div>

@@ -15,41 +15,44 @@ import Header from "./pages/Header";
 import Footer from "./pages/Test";
 import About from "./pages/About";
 import ContactForm from "./pages/ContactForm";
-import { useState } from 'react';
+import { useState } from "react";
 import Dashboardheader from "./component/Dashboard";
 import SideBarDashboard from "./component/SideBarDashboard";
 import UserDashboard from "./component/UserDashboard";
 import { AppProvider } from "./component/usecontext";
 import TourDashboard from "./component/TourDashboard";
-import SingleTour from "./pages/SingleTour"
+import SingleTour from "./pages/SingleTour";
 import TourEditDashboard from "./component/TourEditDashboard";
 import ContactDashboard from "./common/ContactDashboard";
- const Applayout= ()=>{
- return(
- <>
-      <Header/>
-      <Outlet/>
-<Footer/>
-    </>);
-  };
-  const Applayout1=()  =>{
-  const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
+const Applayout = () => {
+  return (
+    <>
+      <Header />
+      <Outlet />
+      <Footer />
+    </>
+  );
+};
+const Applayout1 = () => {
+  const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
 
   const OpenSidebar = () => {
-    setOpenSidebarToggle(!openSidebarToggle)
-  }
+    setOpenSidebarToggle(!openSidebarToggle);
+  };
   return (
     <div className="grid-container">
       <Dashboardheader OpenSidebar={OpenSidebar} />
-     <SideBarDashboard openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} />
+      <SideBarDashboard
+        openSidebarToggle={openSidebarToggle}
+        OpenSidebar={OpenSidebar}
+      />
       <main className="main-container">
         <Outlet />
-      </main> 
+      </main>
     </div>
-  )
-}
+  );
+};
 function App() {
- 
   return (
     <>
       <AppProvider>
