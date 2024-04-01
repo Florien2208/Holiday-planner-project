@@ -1,16 +1,12 @@
-import React from 'react'
-// import { useState, useEffect } from "react";
 import img from "../images/logo.png";
 import prof from "../images/prof.jpg";
 import "../pages/Header.css";
 import { Link } from "react-router-dom";
 import { FaFacebookF } from "react-icons/fa";
-import {BiSolidUser} from "react-icons/bi";
+
 import { BsTwitter, BsInstagram, BsSearch } from "react-icons/bs";
 
 function Header() {
-
-
   return (
     <div>
       <header className="site-header">
@@ -35,7 +31,7 @@ function Header() {
                       <span className="icon">
                         <i className="fas fa-phone-alt"></i>
                       </span>
-                      <span className="text">+123 456 7890</span>
+                      <span className="text">+250 7875 37524</span>
                     </a>
                   </li>
                 </ul>
@@ -43,7 +39,10 @@ function Header() {
               <div className="col-lg-4">
                 <ul className="header-social">
                   <li>
-                    <a href="FaFacebookF" title="Follow us on Facebook">
+                    <a
+                      href="https://www.linkedin.com/in/florien-mahoro-mpakanyi-398515258/"
+                      title="Follow us on Facebook"
+                    >
                       <span className="icon">
                         <i className="fabfafacebookf">
                           <FaFacebookF />
@@ -53,7 +52,7 @@ function Header() {
                   </li>
                   <li>
                     <a
-                      href="javascript:void(0);"
+                      href="https://www.instagram.com/florienbill?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                       title="Follow us on Instagram"
                     >
                       <span className="icon">
@@ -64,7 +63,10 @@ function Header() {
                     </a>
                   </li>
                   <li>
-                    <a href="javascript:void(0);" title="Follow us on Twitter">
+                    <a
+                      href="https://www.facebook.com/share/oa5ZyZL6hvzVLUgt/?mibextid=qi2Omg"
+                      title="Follow us on Twitter"
+                    >
                       <span className="icon">
                         <i className="fabfafacebookf">
                           <BsTwitter />
@@ -75,8 +77,7 @@ function Header() {
                   <li>
                     <div className="userprofileheader">
                       <img src={prof} alt="User Avatar" />
-                      <p style={{color:"black"}}>Welcome, Guest</p>
-                      {/* Display other user profile information as needed */}
+                      <p style={{ color: "black" }}>Welcome, Guest</p>
                     </div>
                   </li>
                 </ul>
@@ -281,4 +282,4 @@ function Header() {
   );
 }
 
-export default Header
+export default Header;

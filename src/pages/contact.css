@@ -26,10 +26,7 @@
   justify-content: space-between;
 }
 
-/* .two-col {
-  display: flex;
-  align-items: center;
-} */
+
 
 .col12contact,
 .col8contact,
@@ -42,21 +39,6 @@
   padding-left: 15px;
 }
 
-/* .col-1 {
-  flex: 0 0 8.333333%;
-  max-width: 8.333333%;
-}
-
-.col-2 {
-  flex: 0 0 16.666667%;
-  max-width: 16.666667%;
-} */
-
-/* .col-3 {
-  flex: 0 0 25%;
-  max-width: 25%;
-} */
-
 .col4contact {
   flex: 0 0 33.333333%;
   max-width: 33.333333%;
@@ -68,10 +50,6 @@
   max-width: 41.666667%;
 }
 
-/* .col-6 {
-  flex: 0 0 50%;
-  max-width: 50%;
-} */
 
 .col7contact {
   flex: 0 0 58.333333%;
@@ -83,52 +61,12 @@
   max-width: 66.666667%;
 }
 
-/* .col-9 {
-  flex: 0 0 75%;
-  max-width: 75%;
-}
-
-.col-10 {
-  -ms-flex: 0 0 83.333333%;
-  flex: 0 0 83.333333%;
-  max-width: 83.333333%;
-}
-
-.col-11 {
-  -ms-flex: 0 0 91.666667%;
-  flex: 0 0 91.666667%;
-  max-width: 91.666667%;
-} */
-
 .col12contact {
   flex: 0 0 100%;
   max-width: 100%;
   
 }
 
-
-/*=========BANNER FORM==============*/
-/* section.banner-form {
-  width: 90%;
-  margin-top: -50px;
-  box-shadow: var(--box-shadow);
-} */
-
-/* .banner-form {
-  background: var(--white-color);
-  padding: 25px 30px;
-  position: relative;
-  margin: 0 auto;
-  margin-top: -50px;
-  border-left: 3px solid var(--yellow-color);
-  border-right: 3px solid var(--yellow-color);
-} */
-
-/* form.form {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} */
 
 .forminputcontact {
   width: 100%;
@@ -170,24 +108,6 @@
   pointer-events: none;
 }
 
-/* .banner-form form .banner-form-input {
-  max-width: 27.545%;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 100%;
-  flex: 0 0 27.545%;
-}
-
-.banner-form form .banner-form-input.formbtncontact {
-  max-width: 17.365%;
-  flex: 0 0 17.365%;
-}
-
-.banner-form form .banner-form-input.formbtncontact .btn {
-  width: 100%;
-} */
-
-
 /*========CONTACT PAGE=========*/
 
 .contactherocontact{
@@ -215,10 +135,6 @@
 .contactformcontact .inputboxcontact {
   margin-bottom: 30px;
 }
-
-/* form {
-  display: block;
-} */
 
 textarea.forminputcontact {
   resize: none;
@@ -253,17 +169,6 @@ textarea.forminputcontact {
 .widgetcontact .linetitlecontact {
   margin-bottom: 20px;
 }
-
-/* 
-.why-book-with-us .bookwithlistcontact li {
-  position: relative;
-  color: rgb(43 43 43 / 0.6);
-  margin-bottom: 5px;
-}
-
-.why-book-with-us .bookwithlistcontact li:last-child {
-  margin-bottom: 0;
-} */
 
 .gaq::before {
   content: "";

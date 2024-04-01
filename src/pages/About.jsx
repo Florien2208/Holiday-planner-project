@@ -1,4 +1,4 @@
-import React from "react";
+
 import woo from "../images/image.jpg";
 import small from "../images/about-home.jpg";
 import "../pages/About.css";
@@ -36,12 +36,7 @@ function About() {
           <div className="row">
             <div className="col-lg-6">
               <div className="about-image-wp">
-                {/* Big Image */}
-                {/* <div className="about-image-box big wow right-animation" data-wow-duration="1s" data-wow-delay="0.1s" style={containerStyle1}>
-                  <div className="about-image back-image"></div>
-                </div> */}
-
-                {/* Small Image */}
+               
                 <div
                   style={containerStyle1}
                   className="about-image-box small wow fadeup-animation"

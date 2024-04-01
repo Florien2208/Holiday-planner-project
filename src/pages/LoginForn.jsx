@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../pages/LoginForm.css";
 import logoIconblack from "../images/logo.png";
 import { Link } from "react-router-dom";
@@ -11,7 +11,7 @@ const LoginForn = () => {
   const navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // TODO: Implement login logic here
+    
     const userData = {
       email,
       password,
@@ -28,8 +28,7 @@ const LoginForn = () => {
         }
       );
       if (response.ok) {
-        // Instead of using useHistory, use the Link component for navigation
-        // return <Link to="/dashboard" />;
+     
 
         alert("login successfully");
         const data = await response.json();

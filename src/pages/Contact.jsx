@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "../pages/contact.css";
 import axios from "axios";
 import Notiflix from "notiflix";
 import {
-  FaUser,
+
   FaEnvelope,
-  FaPhone,
-  FaBook,
+  
   FaAngleRight,
   FaPhoneAlt,
   FaMapMarkerAlt,
