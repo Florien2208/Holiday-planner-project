@@ -1,18 +1,13 @@
 import { useState } from "react";
 import "../pages/LoginForm.css";
 import logoIconblack from "../images/logo.png";
-import mg from "../pages/image9.jpg";
-import axios from "axios"; // Import Axios
-import mg1 from "../pages/image9.jpg";
-// import { ToastContainer, toast } from "react-toastify";
+
+import axios from "axios"; 
+
+
 import { Link } from "react-router-dom";
 const SignupForm = () => {
-    // const notify = () => {
-    //   toast.success("This is a notification!", {
-    //     position: "top-right",
-    //     autoClose: 2000, // Time in milliseconds for the notification to auto-close
-    //   });
-    // };
+
   const [fullNames, setfullNames] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNo, setPhone] = useState("");
@@ -21,7 +16,7 @@ const SignupForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // TODO: Implement signup logic here
+   
 
     if (password !== confirmPassword) {
       alert("Passwords do not match");
@@ -39,20 +34,17 @@ const SignupForm = () => {
         }
       );
 
-      // Handle the response here, e.g., show a success message or redirect to login page
+     
       console.log("User registered successfully", response.data);
       alert("registered successfully");
-      // Clear the
+   
       setfullNames("");
       setEmail("");
       setPhone("");
       setPassword("");
       setConfirmPassword("");
     } catch (error) {
-      //  {
-      //    notify;
-      //  }
-      // Handle API errors, e.g., display an error message
+      
       console.error("Error during registration", error);
       alert(" user with Email already exists")
      
@@ -73,13 +65,7 @@ const SignupForm = () => {
           </div>
           <div className="form-left">
             <h1 style={{ color: "black" }}>Signup Form</h1>
-            {/* Add Login link at the top */}
-            {/* <div className="form-links">
-              <h3 style={{ color: "black" }}>Back to</h3>
-              <Link to="/LoginForn" style={{ color: "black" }}>
-                <h2 style={{ color: "blue" }}> Login</h2>
-              </Link>
-            </div> */}
+       
             <br />
             <br />
             Full Names
